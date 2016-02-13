@@ -3,6 +3,7 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
 var del = require('del');
+var ga = require('gulp-ga');
 
 elixir(function(mix) {
   mix.task('clean-dist');
@@ -30,7 +31,7 @@ gulp.task('build-html', function() {
       firstName: 'Marco',
       lastName: 'Damaceno',
       slogan: 'Um programador Ruby e PHP',
-      description: '',
+      description: 'Marco Damaceno é um programador Ruby e PHP que mora em Juiz de Fora - MG',
       email: 'maadamaceno@gmail.com',
       image_path: 'images/marcodamaceno.png'
     },
@@ -48,6 +49,11 @@ gulp.task('build-html', function() {
     .pipe(handlebars(templateData, options))
     .pipe(rename(function(path) {
       path.extname = '.html';
+    }))
+    .pipe(ga({
+      url: 'marcodamaceno.com.br',
+      uid: 'UA-73758709-1',
+      minify: true
     }))
     .pipe(gulp.dest('dist'));
 });

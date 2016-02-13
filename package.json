@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "gulp-compile-handlebars": "^0.6.1",
+    "gulp-ga": "0.0.7",
     "gulp-rename": "^1.2.2",
     "laravel-elixir": "^5.0.0"
   }
