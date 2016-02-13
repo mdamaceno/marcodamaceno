@@ -11,7 +11,8 @@ elixir(function(mix) {
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './resources/assets/css/raleway.css',
     // './resources/assets/css/ie10-viewport-bug-workaround.css',
-    './resources/assets/css/blog.css'
+    './resources/assets/css/blog.css',
+    './resources/assets/css/custom.css'
   ], './dist/stylesheets/app.css');
 
   mix.scripts([
