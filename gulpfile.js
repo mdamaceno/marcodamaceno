@@ -7,14 +7,14 @@ elixir(function(mix) {
   mix.styles([
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './resources/assets/css/raleway.css',
-    './resources/assets/css/ie10-viewport-bug-workaround.css',
+    // './resources/assets/css/ie10-viewport-bug-workaround.css',
     './resources/assets/css/blog.css'
   ], './dist/stylesheets/app.css');
 
   mix.scripts([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './resources/assets/js/ie10-viewport-bug-workaround.js'
+    // './node_modules/jquery/dist/jquery.min.js',
+    // './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    // './resources/assets/js/ie10-viewport-bug-workaround.js'
   ], './dist/js/app.js');
 
   mix.copy('./resources/assets/images/marcodamaceno.png', './dist/images');
