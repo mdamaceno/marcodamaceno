@@ -17,7 +17,8 @@ elixir(function(mix) {
   mix.scripts([
     // './node_modules/jquery/dist/jquery.min.js',
     // './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    // './resources/assets/js/ie10-viewport-bug-workaround.js'
+    // './resources/assets/js/ie10-viewport-bug-workaround.js',
+    './resources/assets/js/ga.js'
   ], './dist/js/app.js');
 
   mix.copy('./resources/assets/images/marcodamaceno.png', './dist/images');
