@@ -9,26 +9,30 @@ elixir(function(mix) {
     './resources/assets/css/raleway.css',
     './resources/assets/css/ie10-viewport-bug-workaround.css',
     './resources/assets/css/blog.css'
-  ], 'dist/stylesheets/app.css');
+  ], './dist/stylesheets/app.css');
 
   mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './resources/assets/js/ie10-viewport-bug-workaround.js'
-  ], 'dist/js/app.js');
+  ], './dist/js/app.js');
+
+  mix.copy('./resources/assets/images/marcodamaceno.png', './dist/images');
 
   mix.task('build-html');
 });
 
 gulp.task('build-html', function() {
   var templateData = {
-      firstName: 'Kaanon'
+      firstName: 'Marco',
+      lastName: 'Damaceno',
+      slogan: 'Um programador Ruby e PHP',
+      description: '',
+      email: 'maadamaceno@gmail.com',
+      image_path: 'images/marcodamaceno.png'
     },
     options = {
       ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
-      partials: {
-        footer: '<footer>the end</footer>'
-      },
       batch: ['./resources/views/partials', './resources/views/contents'],
       helpers: {
         capitals: function(str) {

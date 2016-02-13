@@ -1,8 +1,13 @@
 <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+  <div class="sidebar-module">
+    <p class="text-center">
+      <img src="{{ image_path }}" alt="{{ firstName }} {{ lastName }} imagem" title="{{ firstName }} {{ lastName }}" width="220" />
+    </p>
+  </div>
   <div class="sidebar-module sidebar-module-inset">
     <h4>Sobre</h4>
-    <p>Marco Damaceno, 27, programador Ruby e PHP. Natural de Volta Redonda - RJ, mas morando em Juiz de Fora - MG. Usuário Linux com experiências com Ubuntu, Fedora e Manjaro.</p>
-    <p>Contato: maadamaceno@gmail.com</p>
+    <p>{{ firstName }} {{ lastName }}, 27, programador Ruby e PHP. Natural de Volta Redonda - RJ, mas morando em Juiz de Fora - MG. Usuário Linux com experiências com Ubuntu, Fedora e Manjaro.</p>
+    <p>Contato: {{ email }}</p>
   </div>
   <div class="sidebar-module">
     <h4>Links</h4>
