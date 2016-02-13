@@ -2,8 +2,11 @@ var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
+var del = require('del');
 
 elixir(function(mix) {
+  mix.task('clean-dist');
+
   mix.styles([
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './resources/assets/css/raleway.css',
@@ -47,4 +50,10 @@ gulp.task('build-html', function() {
       path.extname = '.html';
     }))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('clean-dist', function() {
+  del([
+    './dist'
+  ]);
 });

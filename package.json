@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "del": "^2.2.0",
     "es6-promise": "^3.0.2",
     "gulp": "^3.9.1",
     "handlebars": "^4.0.5",
