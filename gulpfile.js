@@ -3,7 +3,6 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var elixir = require('laravel-elixir');
 var del = require('del');
-var ga = require('gulp-ga');
 
 elixir(function(mix) {
   mix.task('clean-dist');
@@ -49,11 +48,6 @@ gulp.task('build-html', function() {
     .pipe(handlebars(templateData, options))
     .pipe(rename(function(path) {
       path.extname = '.html';
-    }))
-    .pipe(ga({
-      url: 'marcodamaceno.com.br',
-      uid: 'UA-73758709-1',
-      minify: true
     }))
     .pipe(gulp.dest('dist'));
 });
